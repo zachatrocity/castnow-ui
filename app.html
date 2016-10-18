@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>NW Vue Boilerplate</title>
+
+    <link href="./build/css/main.css" rel="stylesheet" type="text/css">
+    <link href="./build/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Load real app code -->
+    <script src="node_modules/nw-dev/lib/dev.js"></script> 
+</head>
+<body>
+
+    <div id="app" class="container">
+	    <button id="menubtn"
+		class="btn"
+		@click="showMenu = true">
+			<span id="menuicon" class="glyphicon glyphicon-menu-hamburger"></span>
+		</button>
+
+		<sidebar :show.sync="showMenu" placement="right" header="Title" :width="350">
+		...
+		</sidebar>
+    	<div class="row">
+    		<div class="col-sm-12">
+				<h1 class="text-center">Castnow UI!</h1>
+			</div>
+			<div class="col-sm-12">
+				<bsinput :value.sync="casturl" type="text" placeholder="URL" class="casturl"></bsinput>
+			</div>
+			<div class="col-sm-12 text-center">
+				<vselect :value.sync="params" :options="options" placeholder="Parameters" options-value="val" multiple limit="10" justified required clear-button></vselect>
+				<button type="submit" v-on:click="cast" class="btn btn-default cast-btn">Cast!</button>
+			</div>
+		</div>
+	</div>
+	<script src="./node_modules/vue/dist/vue.js"></script>
+    <script src="./node_modules/vue-strap/dist/vue-strap.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>
