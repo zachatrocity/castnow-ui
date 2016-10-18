@@ -1,5 +1,5 @@
-# nw-vue-boilerplate
-A boilerplate to create a nw.js application with vue.js, stylus, and jasmine
+# castnow-ui
+A simple castnow-ui built with nw.js. This is WIP.
 
 #install
 Download or clone this repo
@@ -8,7 +8,7 @@ Then `gulp dev`
 
 #Structure
 ```
-nw-vue-boilerplate
+castnow-ui
 |───build - where files from css folder are put after they are built
 |───css	- where you add/edit stylus
 |───libs - for external javascript library (non modules)
@@ -20,4 +20,3 @@ nw-vue-boilerplate
 |	gulpfile.js
 |	package.json
 ```
-# castnow-ui
